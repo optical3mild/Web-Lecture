@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html
+  <head>
+    <meta charset="utf-8">
+    <title>셀렉터 만들기</title>
+    <style>
+      h3, li { color: brown;} /*태그 이름 셀렉터*/
+      div > div > strong { background: yellow;} /*자식 셀렉터*/
+      ul strong { color: dodgerblue;} /*자손 셀렉터*/
+      .warning { color: red;} /*class 셀렉터*/
+      body.main { background: aliceblue;} /*class 셀렉터*/
+      #list { /*id셀렉터*/
+        background: mistyrose;
+      }
+      #list span { /*자손 셀렉터*/
+        color: forestgreen;
+      }
+      h3:first-letter { /*가상클래스 셀렉터*/
+        color: red;
+      }
+      li:hover { /*가상클래스 셀렉터*/
+        background: yellowgreen;
+      }
+    </style>
+  </head>
+  <body class="main">
+    <h3>Web programming</h3>
+    <hr>
+    <div>
+      <div>2학기 <strong>학습내용</strong></div>
+      <ul id="list">
+        <li>HTML5</li>
+        <li><strong>CSS</strong></li>
+        <li>JAVASCRIPT</li>
+      </ul>
+      <div class="warning">60점 이하는 F!</div>
+    </div>
+  </body>
+</html>

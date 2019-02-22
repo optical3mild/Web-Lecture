@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>text-shadow와 box-shadow</title>
+    <style>
+      h1 { text-align: center;}
+      .multiEffect { color: yellow;
+                     text-shadow: 2px 2px 2px black,
+                                  5px 5px 3px blue, 5px 5px 5px darkblue;
+                    }
+      .img-sites { width: 200px;}
+      .img-sites:hover { box-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue; }
+    </style>
+  </head>
+  <body>
+    <h1 class="multiEffect">Most Visited Pages</h1>
+    <hr>
+    <table>
+      <tbody>
+        <tr>
+          <td><img class="img-sites" src="media/naver.png" alt="네이버"></td>
+          <td><img class="img-sites" src="media/chosun.png" alt="조선일보"></td>
+          <td><img class="img-sites" src="media/amazon.png" alt="아마존"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
