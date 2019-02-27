@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prompt()함수 이용 출근여부 출력</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var exodus;
+    do {
+      var goThrough = prompt("암호를 대라(종료: 'quit').","");
+      switch (goThrough) {
+        case "you":
+          document.write("<h3>암호를 입력하라!</h3>");
+          document.write("<hr>");
+          document.write("통과!");
+          exodus = "quit";
+          break;
+        case "quit":
+          document.write("<h3>알아와라!</h3>");
+          document.write("<hr>");
+          document.write("다음기회에..");
+          exodus = "quit";
+          break;
+        default:
+          break;
+      }
+    } while(exodus != "quit");
+  </script>
+</body>
+</html>
