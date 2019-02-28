@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>시험문제 13번</title>
+  <style>
+    th { text-align: center; width: 200px;}
+    fieldset { width: 500px;}
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>회원 가입</legend>
+      <table>
+        <tr>
+          <th>로그인 ID:</th>
+          <td><input type="text" name="로그인ID" placeholder="id"></td>
+        </tr>
+        <tr>
+          <th>패스워드:</th>
+          <td><input type="password" name="패스워드"></td>
+        </tr>
+        <tr>
+          <th>이메일:</th>
+          <td><input type="email" name="이메일" placeholder="id@host"></td>
+        </tr>
+        <tr>
+          <th>전화번호:</th>
+          <td><input type="tel" name="전화번호" placeholder="010-1234-5678"></td>
+        </tr>
+        <tr>
+          <th>성별:</th>
+          <td>
+            <input type="radio" name="성별" value="1">남성&nbsp;&nbsp;
+            <input type="radio" name="성별" value="2">여성
+          </td>
+        </tr>
+        <tr>
+          <th>생년월일:</th>
+          <td><input type="date" name="생년월일"></td>
+        </tr>
+        <tr>
+          <th>좋아하는 음식:</th>
+          <td>
+            <input type="checkbox" name="음식">한식&nbsp;&nbsp;
+            <input type="checkbox" name="음식">중식&nbsp;&nbsp;
+            <input type="checkbox" name="음식">일식&nbsp;&nbsp;
+            <input type="checkbox" name="음식">양식
+          </td>
+        </tr>
+        <tr>
+          <th>사는 곳:</th>
+          <td>
+            <select size="1">
+              <option value="1">대전광역시 유성구</option>
+              <option value="2">대전광역시 동구</option>
+              <option value="3">대전광역시 서구</option>
+              <option value="4">대전광역시 중구</option>
+              <option value="5">대전광역시 대덕구</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</body>
+</html>

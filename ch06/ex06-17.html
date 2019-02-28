@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>for문으로 10~35px 출력</title>
+</head>
+<body>
+  <h3>for문으로 10~35px 출력</h3>
+  <hr>
+  <script>
+    for (var i=10; i<=35; i+=5) {
+      document.write("<span " + "style='font-size:" + i + "px'>");
+      document.write(i + "px" + "</span>");
+    }
+    document.write("<br>");
+    for (var i=10; i<=35; i+=5) {
+      document.write("<span " + "style='font-size:" + i + "px'>");
+      document.write(i + "px" + "</span>");
+      document.write("<br>");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>document.write()로 표만들기</title>
+  <script>
+    function nTable(n, s) {
+      var m = parseInt(n);
+      if (isNaN(m)) { //입력값 검사
+        alert("잘못 입력하셨습니다.");
+        return;
+      }
+      var r = parseInt(s);
+      if (isNaN(r)) { //입력값 검사
+        alert("잘못 입력하셨습니다.");
+        return;
+      }
+
+      document.write("<table border=1>"); // table tag 시작접입력
+
+      for (var index=1; index<=r; index++) {
+      document.write("<tr>");
+      /*  if (index=1){ // 각 row의 head 형성
+          document.write("<th><b>n</b></th>");
+        } else {
+          document.write("<th><b>n<sup>index</sup></b></th>");
+        } */
+        for (var k=0; k<=m; k++) { // 각 row의 cell형성
+        var y=k;
+        document.write("<td>" + y^r + "</td>");
+      }
+        document.write("</tr><br>")
+      }
+      document.write("</table>");
+    }
+  </script>
+</head>
+<body>
+  <script>
+    var n = prompt("몇번까지 보실건가요?");
+    var s = prompt("몇승까지 보실건가요?");
+    document.write("<h3>document.write()로 표만들기</h3>");
+    document.write("<hr>");
+    nTable(n, s);
+  </script>
+</body>
+</html>

@@ -5,15 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>document.write()로 표만들기</title>
+  <script>
+    function nTable(m) {
+      var n = parseInt(m);
+      if (isNaN(n)) { //입력값 검사
+        alert("잘못 입력하셨습니다.");
+        return;
+      }
+      document.write("<table border=1>"); // table tag 시작접입력
+      document.write("<tr>");
+      document.write("<th><b>n</b></th>");
+      for (var i=0; i<=n; i++) {
+        var k=i;
+        document.write("<td>" + k + "</td>");
+      }
+      document.write("</tr><br>");
+      document.write("<tr>");
+      document.write("<th><b>n<sup>2</sup></b></th>");
+      for (var i=0; i<=n; i++) {
+        var k=i*i;
+        document.write("<td>" + k + "</td>");
+      }
+      document.write("</tr>");
+      document.write("</table>");
+    }
+  </script>
 </head>
 <body>
-  <script type="text/javascript">
-   document.write("<h3>document.write()로 표만들기</h3>");
-   document.write("<hr>");
-   
-   document.write("***"+"<br>");
-   document.write("****"+"<br>");
-   document.write("*****"+"<br>");
+  <script>
+    var m = prompt("몇번까지 보실건가요?");
+    document.write("<h3>document.write()로 표만들기</h3>");
+    document.write("<hr>");
+    nTable(m);
   </script>
 </body>
 </html>

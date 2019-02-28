@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>for문으로 0에서 n까지의 합 (단, n은 음수)</title>
+</head>
+<body>
+  <h3>for문으로 0에서 n까지의 합 (단, n은 음수)</h3>
+  <hr>
+  <script>
+    var input = parseInt(prompt("음의 정수를 입력하세요",""));
+  /*  while (index <= input) {
+      sum += index;
+      index++;
+    }
+    document.write("0에서 " + input + "까지 합은 " + sum + "입니다.");
+    document.write("<br>"+"<hr>");*/
+    for (var index=0, sum=0; index>=input; index--) {
+      sum += index;
+    }
+    document.write("0에서 " + input + "까지 합은 " + sum + "입니다.");
+    document.write("<br>"+"<hr>");
+  </script>
+</body>
+</html>
