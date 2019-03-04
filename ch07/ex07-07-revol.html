@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>사용자 입력 처리</title>
+</head>
+<body>
+  <h3>사용자 입력 처리</h3>
+  <hr>
+  <script>
+    var input = prompt("이름을 ','로 분리하여 입력하세요");
+
+    document.write(input + "<br><hr>");
+
+    //1)입력한 이름을 오름차순으로 출력하시오. --> ',''로 분리하여 array로 저장.
+    var sep = input.split(",");
+    /*var reArrange = */sep.sort(); //출력이 되는 이유?
+    //document.write(reArrange);
+
+    document.write(input + "<br><hr>");
+
+    var sep2 = input.split(",");
+    sep2.sort();
+    for (var i=0; i<sep2.length; i++)
+      document.write(sep2[i] + "<br>");
+  </script>
+</body>
+</html>

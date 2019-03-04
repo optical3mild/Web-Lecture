@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>난수</title>
+  <script>
+    function randomInt() {
+      return Math.floor(Math.random()*99) + 1;
+    }
+  </script>
+</head>
+<body>
+  <h3>난수 10개 생성</h3>
+  <hr>
+  <script>
+    var n=[];
+    for (var i=0; i<10; i++) {
+      n[i] = randomInt();
+    }
+
+    for (var i=0; i<10; i++)
+      document.write(n[i] + " ");
+    document.write("<hr>");
+
+    var big1 = n[0];
+    var big2 = n[0];
+    var big3 = n[0];
+    for (var i=0; i<10; i++) {
+      big2 = (big2>n[i]) ? big2 : n[i]; //2번벙법(조건연산 p277)
+      //if (big<n[i]) { big = n[i];} //3번 방법
+    }
+    for (var i=0; i<10; i++) {
+      if (big3<n[i]) { big3 = n[i];} //3번 방법
+    }
+    n = n.reverse(n.sort());
+    big1 = n[0]; //1번방법 for 문 필요 x
+
+    document.write("1. sort() + reverse() - 제일 큰 수는 " + big1 + "<br>");
+    document.write("2. for 조건연산 - 제일 큰 수는 " + big2 + "<br>");
+    document.write("3. for + if문 - 제일 큰 수는 " + big3 + "<br>");
+    document.write("<hr>");
+    n.sort();
+    for (var i=0; i<10; i++)
+      document.write(n[i] + " ")
+  </script>
+</body>
+</html>

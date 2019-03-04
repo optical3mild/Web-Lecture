@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>방문 시간에 따라 변하는 배경색</title>
+</head>
+<body>
+  <h3>오전이면 lightSkyBlue, 오후이면 orange배경</h3>
+  <hr>
+  <script type="text/javascript">
+    var current = new Date();
+    if (current.getHours() < 13)
+      document.body.style.backgroundColor = "lightSkyBlue";
+    else
+      document.body.style.backgroundColor = "orange";
+
+    document.write("오늘 : ");
+    document.write(current.getHours(), "시 ");
+    document.write(current.getMinutes(), "분 ");
+    document.write(current.getSeconds(), "초<br>");
+    document.write("현재시각 : " + current.toLocaleTimeString() + "<br>");
+  </script>
+</body>
+</html>

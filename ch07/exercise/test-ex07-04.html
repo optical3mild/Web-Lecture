@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>방문 요일에 따라 변하는 배경색</title>
+  <script type="text/javascript">
+    function toDayKo() {
+      switch (current.getDay()) {
+        case 0:
+          return "일요일";
+          break;
+        case 1:
+          return "월요일";
+          break;
+        case 2:
+          return "화요일";
+          break;
+        case 3:
+          return "수요일";
+          break;
+        case 4:
+          return "목요일";
+          break;
+        case 5:
+          return "금요일";
+          break;
+        case 6:
+          return "토요일";
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>일요일은 pink, 다른요일은 gold배경</h3>
+  <hr>
+  <script type="text/javascript">
+    var current = new Date();
+    if (current.getDay() != 0)
+      document.body.style.backgroundColor = "gold";
+    else
+      document.body.style.backgroundColor = "pink";
+
+    document.write("오늘 : ");
+    document.write(current.getMonth()+1, "월 ");
+    document.write(current.getDate(), "일, ");
+    document.write(toDayKo(), "<br>");
+    document.write("현재시각 : " + current.toLocaleTimeString() + "<br>");
+  </script>
+</body>
+</html>
