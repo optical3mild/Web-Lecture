@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Z-index 스타일 프로퍼티</title>
+  <style>
+    div { position : absolute;}
+    img { position : absolute;}
+  </style>
+</head>
+<body>
+  <h3>Z-index 스타일 프로퍼티</h3>
+  <hr>
+  <div>
+    <img src="media/spade-A.png" width="100" height="140" alt="스페이드 A">
+    <img src="media/spade-2.png" width="100" height="140" alt="스페이드 2">
+    <img src="media/spade-3.png" width="100" height="140" alt="스페이드 3">
+    <img src="media/spade-7.png" width="100" height="140" alt="스페이드 7">
+  </div>
+  <script type="text/javascript">
+      var cardArray = document.getElementsByTagName("img");
+      for (var i=0; i<cardArray.length; i++) {
+        var oneCard = cardArray[i];
+        oneCard.style.zIndex = i;
+        oneCard.onclick = cardClick;
+      }
+      function cardClick() {
+        for (var i=0; i<cardArray.length; i++) {
+          var oneCard =cardArray[i];
+          oneCard.style.zIndex++;
+          oneCard.style.zIndex %= cardArray.length; // a%=b == a=a%b
+        }
+      }
+  </script>
+</body>
+</html>

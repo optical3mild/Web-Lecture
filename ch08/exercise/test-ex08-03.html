@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>visibility 프로퍼티</title>
+  <style>
+    span { visibility: hidden;}
+  </style>
+  <script type="text/javascript">
+    function change() {
+      var spanArray = document.getElementsByTagName("span");
+      for (var i=0; i<spanArray.length; i++) {
+        var span = spanArray[i];
+        if (span.style.visibility == "visible") {
+          span.style.visibility = "hidden";
+        } else {
+          span.style.visibility = "visible";
+        }
+      }
+      /*if () {
+        mySpan.style.visibility = "hidden";
+      } else {
+        mySpan.style.visibility = "visible";
+      }*/
+    }
+  </script>
+</head>
+<body>
+  <h3>다음 빈 곳에 숨은 단어?
+    <button onclick="change()">show/hide</button>
+  </h3>
+  <hr>
+  <ul>
+    <li>I (<span>love</span>) you</li>
+    <li>CSS is Cascading (<span>Style</span>)Sheet</li>
+    <li>응답하라 (<span>1988</span>).</li>
+  </ul>
+</body>
+</html>
