@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>바탕 아무 곳에나 더블클릭</title>
+  <style>
+    body { width: 100% ; height: 100%}
+  </style>
+  <script type="text/javascript">
+    function change() {
+      var newNo = new Array();
+      for(i=0; i<3; i++) {
+        newNo[i] = Math.floor(Math.random()*257);
+      }
+      document.body.style.backgroundColor = "rgb(" + newNo + ")";
+    }
+  </script>
+</head>
+<body ondblclick="change()">
+  <h3>바탕 아무 곳에나 더블클릭</h3>
+  <hr>
+  바탕 아무 곳이나 <b>더블클릭</b>하면 배경색이 랜덤하게 변합니다.
+</body>
+</html>
