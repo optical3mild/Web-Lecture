@@ -6,14 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>포커스와 onblur, onfocus</title>
   <script type="text/javascript">
-    window.addEventListener() { "click"
-      function checkField(obj) {
-        if(obj.value == "") {
-          alert("enter name");
-          obj.focus();
-        }
-      }
-    }
+    //1번방법
+    window.addEventListener("blur",
+    function() {
+      document.body.style.backgroundColor = "lightgray";
+    });
+    window.addEventListener("focus",
+    function() {
+      document.body.style.backgroundColor = "white";
+    });
+    
+    // 3번 방법. 안되는 이유?
+    // window.addEventListener("blur",blurCheck);
+    // window.addEventListener("focus",focusCheck);
+    // function blurcheck() {
+    //   document.body.style.backgroundColor = "lightgray";
+    // }
+    // function focuscheck() {
+    //   document.body.style.backgroundColor = "white";
+    // }
+
+    //2번방법
+    // window.onblur = function() {
+		// 	document.body.style.backgroundColor = "lightgray";
+		// }
+		// window.onfocus = function() {
+		// 	document.body.style.backgroundColor = "white";
+		// }
   </script>
 </head>
 <body>

@@ -6,11 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>이벤트 객체의 target</title>
   <script>
-    function fontReSizing(obj) {
-      
-      var fRS;
-      obj.style.fonts
-    }
+    var found = null;
+      window.onclick = function(e) {
+        if (e.target.tagName.toLowerCase() != "li")
+          return;
+        else
+          e.target.style.fontSize = "1.3em";
+        if (found != null)
+          found.style.fontSize = "1em";
+        found = e.target;
+      }
   </script>
 </head>
 <body>
