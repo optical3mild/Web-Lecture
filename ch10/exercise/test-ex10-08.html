@@ -16,9 +16,9 @@
 		var countDown = 11; // 10 초동안
 
 		function startTimer() {
-			document.getElementById("value").innerHTML = 0; // score 초기화
+			document.getElementById("value").innerHTML = 0;
 			var clock = document.getElementById("clock");
-			countDown = 11; // 10초 동안. 초기화
+			countDown = 11;
 			if(timerID != null)
 				clearTimeout(timerID);
 			timeout(clock);
@@ -29,7 +29,7 @@
 			if(countDown == 0)
 				submitAns();
 			else
-				timerID = setTimeout("timeout(clock)", 1000); // 1초 후 timeout() 호출
+				timerID = setTimeout("timeout(clock)", 1000);
 		}
 
     function regenQus() {
