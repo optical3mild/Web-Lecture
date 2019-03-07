@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5</title>
+  <script type="text/javascript">
+  function printNavigator() {
+    var wAgent = navigator.userAgent.toLowerCase(); //소문자로 문자변환
+    var wVendor = navigator.vendor.toLowerCase();
+    if(wAgent.indexOf("chrome")!=-1 && wVendor.indexOf("google")!=-1) {
+      alert("Google Chrome 브라우저 입니다.");
+    } else {
+      alert("Google Chrome 브라우저가 아닙니다.");
+    }
+  }
+  </script>
+</head>
+<body onload="printNavigator()">
+  <h3>구글 Chrome브라우저 판별</h3>
+  <hr>
+  웹 브라우저에 따라 지원되는 자바스크립트들이 다를 수도 있습니다.
+  DOM의 기능은 표준화되어있어 동일하지만, BOM객체들은 많이 다릅니다.
+</body>
+</html>

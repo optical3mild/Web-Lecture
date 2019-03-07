@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>setTimeout과 clearTimeout</title>
+  <style>
+    div { border: 1px solid blue; background-color: skyblue; display: inline;}
+  </style>
+  <script>
+    function switcher() {
+      var bClock = document.getElementById("boxClock");
+      //var timerID = setTimeout("stctClock()", time);
+      stctClock(bClock);
+    }
+    function stctClock(obj) {
+      var current = new Date();
+      obj.innerHTML = current.toLocaleTimeString();
+      setTimeout("stctClock(boxClock)", 1000);
+    }
+  </script>
+</head>
+<body onload="switcher()">
+  <h3>div 태그에 시계 만들기</h3>
+  <hr>
+  <div id="boxClock"></div>
+</body>
+</html>

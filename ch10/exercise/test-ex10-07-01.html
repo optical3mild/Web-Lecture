@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>산수문제를 풀어 봅시다.</title>
+  <style>
+    td { width: 5em;}
+    .ans { border: 1px solid blue; width:10em;}
+  </style>
+  <script type="text/javascript">
+    function submitAns() {
+      var total = 0;
+      var que = document.getElementsByClassName("que");
+      var ans = document.getElementsByClassName("ans");
+      for(i=0; i<que.length; i++) {
+				var question = que[i].innerHTML;
+				var correctAnswer = eval(question);
+				var userAnswer = ans[i].value;
+				if(userAnswer=="" || isNaN(userAnswer)) { // 문자입력여부확인
+					total += 0;
+					que[i].style.textDecoration = "line-through";
+				}
+				else if(parseInt(userAnswer) == correctAnswer) { // 답이 맞는 경우
+					total += 1;
+					que[i].style.textDecoration = "none";
+				}
+				else { // 답이 틀린 경우
+					total += 0;
+					que[i].style.textDecoration = "line-through";
+				}
+			}
+			document.getElementById("value").innerHTML = total;
+    }
+  </script>
+</head>
+<body>
+  <h3>산수문제를 풀어 봅시다.</h3>
+  수식을 계산하여 답을 입력하고 채점 버튼을 누르세요.
+  <hr>
+  <table>
+    <tr>
+      <td class="que">5*6</td>
+      <td><input type="text" class="ans"></td>
+    </tr>
+    <tr>
+      <td class="que">7+5*3</td>
+      <td><input type="text" class="ans"></td>
+    </tr>
+    <tr>
+      <td class="que">23*2</td>
+      <td><input type="text" class="ans"></td>
+    </tr>
+    <tr>
+      <td class="que">35-7</td>
+      <td><input type="text" class="ans"></td>
+    </tr>
+    <tr>
+      <td><button type="button" onclick="submitAns()">채점</button></td>
+      <td><span id="value">0</span></td>
+    </tr>
+  </table>
+</body>
+</html>

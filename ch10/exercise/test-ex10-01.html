@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5</title>
+  <script type="text/javascript">
+    function popNewWindow() {
+      //var win = window.open("","_blank"); --> 페이지는 새로 열리지만 팝업으로 작동하지 않음.
+      var win = window.open("","_blank","left=300, top=300, width=400, height=300");
+      win.document.write("접속 감사합니다!");
+    }
+  </script>
+</head>
+<body onload="popNewWindow()">
+  <h3>HTML5</h3>
+  <hr>
+  <p>
+    HTML5를 학습하는 사이트입니다. 여기서 HTML5, CSS3, 자바스크립트를 배울 수 있습니다.
+  </p>
+</body>
+</html>
