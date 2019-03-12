@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>prompt()로 정수를 입력받아 별을 출력하기</title>
+  <style>
+    body { font-family: monospace;}
+  </style>
+</head>
+<body>
+  <h3>prompt()로 정수를 입력받아 별을 출력하기</h3>
+  <hr>
+  <script>
+    function printStar() {
+      var n = prompt("정수를 입력하세요","");
+      if(isNaN(n)){
+        alert("입력오류입니다. 숫자를 입력하세요.");
+        document.write("<br>시작하시려면 \"F5\"를 눌러 새로고침 하세요.");
+      }
+      for (var i=1; i<=n; i++) {
+        for (var k=1; k<=i; k++) {
+          document.write("*");
+        }
+        for (var r=1; r<=(n-i)*2; r++){
+          document.write("&nbsp;");
+        }
+        for (var k=1; k<=i; k++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    }
+    printStar();
+  </script>
+</body>
+</html>
